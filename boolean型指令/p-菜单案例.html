@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../../angular.js"></script>
+</head>
+<body ng-app>
+    <!--ng-show和ng-hide(取值为布尔值)，不会删除对应的dom元素，仅仅隐藏-->
+    <ul>
+        <li>
+            <div ng-click="show1=!show1">menu1</div>
+            <ul ng-show="show1">
+                <li>son</li>
+                <li>son</li>
+                <li>son</li>
+            </ul>
+        </li>
+        <li>
+            <div ng-click="show2=!show2">menu2</div>
+            <ul ng-hide="show2">
+                <li>son</li>
+                <li>son</li>
+                <li>son</li>
+            </ul>
+        </li>
+    </ul>
+
+    <hr>
+    <!--ng-if取值为布尔值，如果为false则删除对应的dom元素-->
+    <ul>
+        <li>
+            <div ng-click="show3=!show3">menu3</div>
+            <ul ng-if="show3">
+                <li>son</li>
+                <li>son</li>
+                <li>son</li>
+            </ul>
+        </li>
+        <li>
+            <div ng-click="show4=!show4">menu4</div>
+            <ul ng-if="show4">
+                <li>son</li>
+                <li>son</li>
+                <li>son</li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>
